@@ -58,7 +58,20 @@ class testIWT_AVW(unittest.TestCase):
             self.touch =webdriver.TouchActions(self.driver)#                                            desired_capabilities={
             self.driver.implicitly_wait(20)
        
-        
+        if config['rc_configuration']['platform']=='internet explorer':
+            #executor= 'http://'+'localhost:'+config['rc_configuration']['hostport']+'/wd/hub'
+            #print executor
+
+            hostport=config['rc_configuration']['hostport']
+            import win32helper
+            self.w=Win32Helper()
+            self.w.disableZoomIniE()
+            self.w.disableProtectedMode()
+            self.w.cleanUpCache()
+            self.driver=self.w.cleanUpCookiesAndLaunchIE()
+            
+            self.driver.implicitly_wait(20)
+            
         else:
             self.driver = webdriver.Remote("http://localhost:4444/wd/hub",desired_capabilities={
                 "browserName": config['rc_configuration']['browser'],
