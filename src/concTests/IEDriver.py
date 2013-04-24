@@ -33,7 +33,11 @@ class Win32Helper(object):
             pass
         
             
-
+    def  disablePMusingVBS(self  ):
+        try:
+            system ("wscript  winutil.vbs");
+        except :
+            pass
        
     
     def disableProtectedMode(self , hostName=None ):
