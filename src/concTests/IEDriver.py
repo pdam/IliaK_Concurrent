@@ -35,7 +35,7 @@ class Win32Helper(object):
             
     def  disablePMusingVBS(self  ):
         try:
-            system ("wscript  winutil.vbs");
+            system ("wscript  winutils.vbs");
         except :
             pass
        
@@ -148,7 +148,7 @@ class Test(unittest.TestCase):
     def setUp(self):
         w=Win32Helper()
         w.disableZoomIniE()
-        w.disableProtectedMode()
+        w.disablePMusingVBS()
         w.cleanUpCache()
         w.cleanUpCookiesAndLaunchIE()
         

@@ -66,7 +66,7 @@ class testIWT_AVW(unittest.TestCase):
             import win32helper
             self.w=Win32Helper()
             self.w.disableZoomIniE()
-            self.w.disableProtectedMode()
+            self.w.disablePMusingVBS()
             self.w.cleanUpCache()
             self.driver=self.w.cleanUpCookiesAndLaunchIE()
             

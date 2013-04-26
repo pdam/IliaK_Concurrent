@@ -8,6 +8,13 @@ Set ScriptMe=GetObject("winmgmts:{impersonationLevel=impersonate}!\\" & _
     strComputer & "\root\default:StdRegProv")
 
 'Disable protected mode for local intranet'
+strKeyPath = "Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0\"
+strValueName = "2500"
+dwValue = 0
+ScriptMe.SetDWORDValue HKEY_CURRENT_USER,strKeyPath,strValueName,dwValue
+
+
+'Disable protected mode for local intranet'
 strKeyPath = "Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1\"
 strValueName = "2500"
 dwValue = 0

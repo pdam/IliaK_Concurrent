@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="0" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_site1" time="14.742"><system-out><![CDATA[('test_site1', ' time is:  ', '2013-04-24 15:24:09')
-
-Fetching text from article post:  Beyond are really pleased to announce that our Facebook Sustainability and GE Maps campaigns were both selected as an Official Honoree in the 17th Annual Webby Awards.
-Test done! :D
-]]></system-out></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="1" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_site1" time="0.043"><error type="selenium.common.exceptions.WebDriverException" message="Message: u&quot;Unexpected error launching Internet Explorer. Protected Mode settings are not the same for all zones. Enable Protected Mode must be set to the same value (enabled or disabled) for all zones. (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 15 milliseconds\nBuild info: version: '2.25.0', revision: '17482', time: '2012-07-18 21:08:56'\nSystem info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_21'\nDriver info: driver.version: InternetExplorerDriver\nSession ID: 97818faf-921a-4ce6-9ce5-1483dc879e09&quot; ; Stacktrace: Method newInstance threw an error in None "><![CDATA[Traceback (most recent call last):
+  File "C:\Python27\lib\unittest\case.py", line 318, in run
+    self.setUp()
+  File "C:\Users\pdam\git\IliaK_Concurrent\src\concTests\testIWT_AVW.py", line 79, in setUp
+    "node":config['rc_configuration']['node']})
+  File "C:\Python27\lib\site-packages\selenium-2.31.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 67, in __init__
+    self.start_session(desired_capabilities, browser_profile)
+  File "C:\Python27\lib\site-packages\selenium-2.31.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 109, in start_session
+    'desiredCapabilities': desired_capabilities,
+  File "C:\Python27\lib\site-packages\selenium-2.31.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 160, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium-2.31.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 149, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: u"Unexpected error launching Internet Explorer. Protected Mode settings are not the same for all zones. Enable Protected Mode must be set to the same value (enabled or disabled) for all zones. (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 15 milliseconds\nBuild info: version: '2.25.0', revision: '17482', time: '2012-07-18 21:08:56'\nSystem info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_21'\nDriver info: driver.version: InternetExplorerDriver\nSession ID: 97818faf-921a-4ce6-9ce5-1483dc879e09" ; Stacktrace: Method newInstance threw an error in None 
+]]></error></testcase></testsuite>
